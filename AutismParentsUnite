@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Support Flexible Work Rights for Special Needs Parents</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    line-height: 1.5;
+    background: #f9f9f9;
+    color: #333;
+  }
+  h1 {
+    color: #2a5d84;
+    text-align: center;
+  }
+  p {
+    margin-bottom: 1em;
+  }
+  .video-container {
+    position: relative;
+    padding-bottom: 177.78%; /* 9:16 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    margin-bottom: 20px;
+  }
+  .video-container iframe {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    border: none;
+  }
+  button {
+    background-color: #2a5d84;
+    color: white;
+    border: none;
+    padding: 15px 20px;
+    font-size: 1.1em;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  button:hover {
+    background-color: #1f4561;
+  }
+  textarea {
+    width: 100%;
+    height: 300px;
+    padding: 10px;
+    font-size: 1em;
+    margin-bottom: 20px;
+    resize: vertical;
+  }
+  a.petition-link {
+    display: block;
+    background-color: #e02424;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  a.petition-link:hover {
+    background-color: #b71c1c;
+  }
+  .footer {
+    font-size: 0.9em;
+    color: #666;
+    text-align: center;
+    margin-top: 30px;
+  }
+</style>
+</head>
+<body>
+
+<h1>Help Change Labor Laws for Parents of Children with Special Needs</h1>
+
+<p>Millions of parents across the U.S. are silently struggling—not from a lack of motivation, but from a lack of support. Parents of children with special needs face unique challenges that make traditional work schedules nearly impossible.</p>
+<p>We need your voice to push Congress to update labor laws so parents can work <strong>and</strong> care for their children without impossible sacrifices.</p>
+
+<div class="video-container">
+  <iframe src="https://www.tiktok.com/embed/v2/7496127666588749087" allowfullscreen></iframe>
+</div>
+
+<p><strong>Ready-to-use letter to your local Congressman:</strong></p>
+
+<textarea id="letterText" readonly>
+Dear [Representative's Name],
+
+I am a parent of a child with special needs and I am writing to ask you to support critical labor law reforms to help families like mine.
+
+Millions of parents are struggling not because we lack motivation, but because we lack support. Traditional work schedules make it nearly impossible for us to balance employment and caregiving.
+
+We urge Congress and the U.S. Department of Labor to:
+
+- Require employers to offer flexible scheduling or remote work options for parents of children with documented special needs, where job duties allow.
+- Expand protections under the Family and Medical Leave Act (FMLA) to better cover part-time workers and those in smaller companies.
+- Offer tax incentives or subsidies to employers who accommodate special needs parents.
+- Promote inclusive hiring practices that do not penalize applicants for their caregiving responsibilities.
+
+Every parent deserves the dignity of earning a living without sacrificing their child’s well-being. Please support compassionate labor reform to create a future where no parent must choose between financial stability and being present for their child.
+
+Thank you for your time and consideration.
+
+Sincerely,
+[Your Name]
+[Your Address]
+[Your Contact Information]
+</textarea>
+
+<button onclick="copyLetter()">Copy Letter to Clipboard</button>
+
+<a href="https://www.change.org/p/support-flexible-work-rights-for-parents-of-children-with-special-needs?source_location=search" target="_blank" class="petition-link" rel="noopener noreferrer">
+Sign the Petition on Change.org
+</a>
+
+<p class="footer">To send your letter: Copy the letter above, find your local representative’s contact info at <a href="https://www.house.gov/representatives/find-your-representative" target="_blank" rel="noopener noreferrer">house.gov</a>, and send by email or postal mail. Sharing your personal story will make your message even stronger!</p>
+
+<script>
+function copyLetter() {
+  const textarea = document.getElementById('letterText');
+  textarea.select();
+  textarea.setSelectionRange(0, 99999); // for mobile devices
+  try {
+    const successful = document.execCommand('copy');
+    if(successful) {
+      alert('Letter copied! You can now paste it into an email or document.');
+    } else {
+      alert('Copy failed. Please copy the letter manually.');
+    }
+  } catch (err) {
+    alert('Copy failed. Please copy the letter manually.');
+  }
+}
+</script>
+
+</body>
+</html>
